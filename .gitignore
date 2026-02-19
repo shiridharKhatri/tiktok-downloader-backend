@@ -1,0 +1,48 @@
+# Exclude Frontend from Backend Repo
+client/
+
+# Node
+node_modules/
+.next/
+out/
+build/
+.env
+.env.local
+.env.production
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.venv
+venv/
+ENV/
+
+# Local data
+metadata.json
+page.html
+*.mp4
+*.jpg
+*.jpeg
+*.png
+temp/
