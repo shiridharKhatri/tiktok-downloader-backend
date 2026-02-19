@@ -3,8 +3,6 @@ version: '3.8'
 services:
   tikdown:
     build: .
-    ports:
-      - "8087:8087"
     restart: always
     environment:
       - PYTHONUNBUFFERED=1
