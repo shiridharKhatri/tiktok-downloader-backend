@@ -17,7 +17,9 @@ from tiktok_downloader import TikTokDownloader, USER_AGENTS
 app = FastAPI(
     title="TikDown Production API",
     description="High-performance TikTok Video Downloader (No Watermark)",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url=None,
+    redoc_url=None
 )
 
 # Initialize downloader
@@ -100,8 +102,7 @@ def read_root():
         "status": "online",
         "uptime_seconds": uptime,
         "metrics": stats,
-        "message": "TikDown API is running. Point your static frontend here.",
-        "documentation": "/docs"
+        "message": "TikDown API is running. Point your static frontend here."
     }
 
 @app.get("/status")
@@ -165,5 +166,5 @@ async def download_video(url: str = Query(..., description="The TikTok video URL
 if __name__ == "__main__":
     # Start the production server
     # 0.0.0.0 makes it accessible on the internet (your VPS IP)
-    print("[*] TikDown API starting on http://0.0.0.0:8087")
-    uvicorn.run(app, host="0.0.0.0", port=8087)
+    print("[*] TikDown API starting on http://0.0.0.0:3006")
+    uvicorn.run(app, host="0.0.0.0", port=3006)
