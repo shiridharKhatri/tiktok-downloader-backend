@@ -28,8 +28,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY server/ .
 
 # Expose the API port
-EXPOSE 8087
+EXPOSE 3006
 
 # Start the application with high-concurrency uvicorn
 # 4 workers is a good default for a standard VPS
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8087", "--workers", "4"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "3006", "--workers", "4"]
